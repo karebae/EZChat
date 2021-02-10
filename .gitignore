@@ -1,0 +1,8 @@
+node_modules
+
+**/node_modules
+client/dist/main.bundle.js
+**/.DS_Store
+.eslintrc.js
+
+server/nodemailer/secret.js

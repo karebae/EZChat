@@ -1,0 +1,46 @@
+html {
+  font-family:"Futura Book";
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #f8f8f2;
+}
+
+.descriptor {
+  font-weight: bold; /*wont work bc this is a random font off the internet incapable of bolding*/
+
+  color: #ff79c6;
+}
+
+.flex_grid {
+  height: 90%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_grid .side_col {
+  border: 1px solid #ccc;
+  width: 30%;
+}
+
+.flex_grid .middle_col {
+  border: 1px solid #ccc;
+  width: 70%;
+}
+
+.margin {
+  margin: 20px;
+}
+
+.chat_input_box {
+  color: #bd93f9;
+  background-color: #282a36;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 15px;
+  width: 65%;
+
+  position: absolute;
+  bottom: 2px;
+}

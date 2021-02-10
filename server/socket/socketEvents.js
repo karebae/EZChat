@@ -1,0 +1,6 @@
+module.exports = {
+  SEND_MESSAGE: 'SEND_MESSAGE',
+  NEW_USER: 'NEW_USER',
+  INIT_USERS: 'INIT_USERS',
+  INIT_CHATS: 'INIT_CHATS',
+};
