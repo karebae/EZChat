@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-mongoose.connect('mongodb://localhost/CustomerChat', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost/EZChat', { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 
 connection.on('error', console.error.bind(console, 'database/index.js: MongoDB connection error'));
@@ -12,15 +12,6 @@ connection.once('open', () => {
 });
 
 /*-----------------------------------------------------------*/
-
-// defining schema
-// const messageSchema = new Schema({
-//   message_id: Schema.Types.ObjectId,
-//   timestamp: { type: Date, default: Date.now },
-//   text: String,
-//   sender: String, // Future refactor: boolean. 0 for employee, 1 for customer
-// });
-
 const ticketSchema = new Schema({
   ticket_id: String,
   priority: { type: String, default: 'low' }, // low, medium, high

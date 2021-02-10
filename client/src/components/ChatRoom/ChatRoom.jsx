@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React from 'react';
 import moment from 'moment';
 
@@ -49,7 +47,7 @@ class ChatRoom extends React.Component {
   render() {
     return (
       <div>
-        <h1>CustomerChat - Employee View</h1>
+        <h1>EZChat - Employee View</h1>
         <div className={styles.flex_grid}>
           <div className={styles.side_col}>
             <div className={styles.margin}>

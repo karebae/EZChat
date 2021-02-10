@@ -6,8 +6,6 @@ html {
 }
 
 .descriptor {
-  font-weight: bold; /*wont work bc this is a random font off the internet incapable of bolding*/
-
   color: #ff79c6;
 }
 
@@ -40,7 +38,6 @@ html {
   padding: 20px;
   height: 15px;
   width: 65%;
-
   position: absolute;
   bottom: 2px;
 }

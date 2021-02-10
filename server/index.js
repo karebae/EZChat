@@ -3,7 +3,7 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http, {
   cors: {
     origin: 'http://localhost:8080',
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST"];
   },
 });
 const socketLogic = require('./socket/socket.js')(io);

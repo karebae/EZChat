@@ -1,10 +1,8 @@
-/* eslint-disable */
 import React, { Component } from 'react';
-import ChatRoom from './ChatRoom/ChatRoom.jsx'
-
-import Login from './Login/Login.jsx'
 import io from 'socket.io-client';
-import moment from 'moment';
+
+import ChatRoom from './ChatRoom/ChatRoom.jsx'
+import Login from './Login/Login.jsx'
 
 const ENDPOINT = "http://127.0.0.1:3000/";
 /*------------------------------------------------------*/
@@ -23,26 +21,23 @@ class App extends Component {
       phone: 1234567890,
     };
     this.initSocketConnection = this.initSocketConnection.bind(this);
-    this.initSocket = this.initSocket.bind(this)
+    this.initSocket = this.initSocket.bind(this);
   }
-
 
   componentDidMount() {
     this.initSocketConnection();
   }
 
   initSocketConnection() {
-    let socket = io( ENDPOINT, { transport: ['websocket'] } );
+    let socket = io(ENDPOINT, { transport: ['websocket'] });
     this.setState({ socket });
 
     socket.on('connect', () => {
-      console.log( 'Connected to socket server!')
+      console.log('Connected to socket server!');
     });
   }
 
-
-  // to change the view from <Login/> --> <ChatRoom/> and to pass user info horizontally across components
-  initSocket (firstName, lastName, reason, orderNumber, email, phone) {
+  initSocket(firstName, lastName, reason, orderNumber, email, phone) {
     this.setState({
       login: true,
       firstName,
@@ -51,13 +46,12 @@ class App extends Component {
       orderNumber,
       email,
       phone,
-    })
+    });
   }
-
 
   render() {
     return (
-      this.state.login ?
+      this.state.login ? (
         <ChatRoom
           socket={this.state.socket}
           firstName={this.state.firstName}
@@ -67,15 +61,13 @@ class App extends Component {
           email={this.state.email}
           phone={this.state.phone}
         />
-        :
-
+      )
+        : (
           <Login
-          socket={this.state.socket}
-          initSocket={this.initSocket}
-        />
-
-
-
+            socket={this.state.socket}
+            initSocket={this.initSocket}
+          />
+        )
     );
   }
 }

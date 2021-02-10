@@ -1,8 +1,5 @@
-/* eslint-disable */
 import React from 'react';
 import styles from './IndividualMessage.css';
-
-
 /*------------------------------------------------------*/
 const IndividualMessage = (props) => {
   // console.log('props in conversation', props)
